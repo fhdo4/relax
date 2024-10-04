@@ -1,7 +1,58 @@
+group: Buchhandlungsmodell (FHDo4)
+description: Tables from and for the lecture Database Systems
+category@de: Fachhochschule Dortmund Informatik
+category@en: Fachhochschule Dortmund Computer science
+
+Kunde = {
+	Kundennummer:number, Anrede:string, Nachname:string, Vorname:string, Geburtsdatum:date, Ort:string
+	2310, Frau, Meitner,Lise ,1878-11-17, Berlin
+	7562, Herr, Einstein, Albert, 1879-03-14, Princeton
+	8365, Frau, Curie, Marie, 1867-11-07, Paris
+	8523, NULL, 'Dekanat Informatik', 'FH Dortmund',NULL, Dortmund
+	8524, Herr, Meier, Max, 1987-12-25, Dortmund
+}
+
+Artikel = {
+	Artikelnummer:number, Artikelname:string, Autor:string, Preis:number, Ausgabe:string
+	4812, Datenbanksysteme , Elmasri ,29.95, GEB  
+	4811, Datenbanksysteme , Kemper ,28.90, BRO  
+	4813, Maerchen, Rowling ,12.90, BRO  
+	4814, Anatomie-interaktiv , Schattauer ,19.95, CDR  
+	4815, Anatomie , Sobotta ,69.95, GEB  
+	4816, Anatomie-Atlas , Smith ,24.95, GEB  
+	4820, Datenbank-Skript , FH ,5.95, HEF  
+	4830, 'Harry Potter 20', Rowling, NULL, NULL
+}
+
+Warenkorb = {
+	Kundennummer:number, Artikelnummer:number, Anzahl:number
+	2310,4820,1 
+	7562,4812,1 
+	7562,4813,1 
+	8365,4815,3 
+	8523,4811,1 
+	8523,4812,1 
+	8523,4820,1 
+}
+
+Lager = {
+	Lagernummer:number, Standort:string, ANummer:number, Lagerbestand:number
+	27135, INF ,4811, 2 
+	27136, INF ,4812, 18 
+	27432, FAN ,4813, 0 
+	27522, MED ,4814, 1 
+	27523, MED ,4815, 3 
+	27525, MED ,4816, 5 
+	27527, INF ,4820, 3 
+	27528, MED ,4820, 5 
+	27595,  INF ,NULL,NULL 
+	27596,  MED ,NULL,NULL 
+}
+
 group: UIBK - R, S, T
 description: Tables from and for the lecture [Databases: Foundations, Data Models and System Concepts - University of Innsbruck](http://dbis-informatik.uibk.ac.at/249-0-VO-Datenbanksysteme.html) chapter 3 
-category@de:Universität Innsbruck
-category@en:University of Innsbruck
+category@de: Universität Innsbruck
+category@en: University of Innsbruck
 
 R = {
 a, b, c
