@@ -49,6 +49,161 @@ Lager = {
 	27596,  MED ,NULL,NULL 
 }
 
+
+group: WebShop (FHDo4)
+description: Tables from and for the lecture Database Systems
+category@de: Fachhochschule Dortmund Informatik
+category@en: Fachhochschule Dortmund Computer science
+
+Kunde = {
+	Kundennummer:number,Anrede:string,Vorname:string,Nachname:string,Geburtsdatum:string,Email:string,Plz:string,Ort:string,Strasse:string,Hausnummer:string
+	1, 'Frau', 'Herta', 'Mueller', '04.10.1921', 'fritzathotmail.de', '39850', 'Maieskuel', 'Neuerstrasse', '5'
+	6, 'Herr', 'Dagobert', 'Duck', '24.09.1930', 'ddatgmx.de', '39850', 'Maieskuel', 'Am Geldspeicher', '5'
+	7, 'Frau', 'Freya', 'Wille', '22.05.1979', 'freyawatsatannet.org', '39846', 'Maieskuel', 'Feldweg', '5'
+	8, 'Herr', 'Hubert', 'Humbug', '12.04.1966', 'hubihumatyahoo.com', '39846', 'Maieskuel', 'Am Markt', '88'
+	9, 'Frau', 'Amber', 'Love', '04.02.1983', 'amberloveatforsale.de', '39846', 'Maieskuel', 'Rotlichtgasse', '7'
+	10, 'Herr', 'P.', 'Usher', '22.02.1988', 'Drugstoreatgmx.at', '39000', 'Maieskuel', 'Rotlichtgasse', '4'
+	11, 'Frau', 'Kriemhild', 'Kratzbaum', '23.05.1944', 'katzenladyatwhiskas.de', '39000', 'Maieskuel', 'Feldweg', '17'
+	12, 'Herr', 'A.', 'S. S. Assin', '29.06.1967', 'gunfreakathotmail.com', '39846', 'Maieskuel', 'Am Friedhof', '666'
+	13, 'Frau', 'Mathilda', 'Metzger', '24.04.1977', 'metzgereimetzgeratgmx.de', '39846', 'Maieskuel', 'Am Markt', '1'
+	14, 'Herr', 'Vlad', 'Draculea', '09.09.1431', 'tepesatgmx.ru', '39001', 'Maieskuel', 'Am Friedhof', '77'
+	2, 'Herr', 'Jeffrey', 'Doehmer', '21.03.1960', 'jeffatgmx.de', '39846', 'Maieskuel', 'An der Schokoladenfabrik', '8'
+	4, 'Frau', 'Pueppi', 'Lawless', '24.10.1983', 'plawlessatgmx.de', '39850', 'Maieskuel', 'Freier Fall', '24'
+	5, 'Frau', 'Stefanie', 'Meier', '04.11.1979', 'muttiatyahoo.com', '39850', 'Maieskuel', 'Am Markt', '20'
+	16,'Herr','Georg','Hausierer','12.12.1990','rodentizidatweb.de','39850','Maieskuel','Am Trigger','88'
+	3,'Herr','Rupert','Ratte','22.07.1963', 'harleyfahrer@web.de', '39850', 'Maieskuel', 'Rotlichtgasse', '55'
+	17,'Frau','Chantal','Schulze','12.01.1998','discomaus18atgmx.net','39000','Maieskuel','An der Schokoladenfabrik','8'
+	18,'Herr','Pierre','Bauklo','28.02.1998','null','null','Maieskuel','null','null'
+	19,'Herr','Marco','Mark','30.05.1997','null','null','Maieskuel','null','null'
+}
+
+Artikelkategorie = {
+	KategorieKrz:string, Bezeichnung:string, Oberkategorie:string
+	'GET', 'Getraenke', 'NULL'
+	'AKF', 'Alkoholfreie', 'GET'
+	'SAE', 'Saefte', 'GET'
+	'WAS', 'Wasser', 'GET'
+	'LIM', 'Limonade', 'GET'
+	'ALK', 'Alkoholhaltige', 'GET'
+	'WEI', 'Wein', 'ALK'
+	'BIE', 'Bier', 'ALK'
+	'MIL', 'Milchhaltige', 'GET'
+	'MIS', 'Milchsorte', 'MIL'
+	'SPE', 'Spezielles', 'GET'
+	'WHI', 'Whiskey', 'ALK'
+	'SEK', 'Sekt', 'ALK'
+	'COL','Cola','LIM'
+	'KAF','Kaffeegetraenk','MIS'
+	'HMI','H-Milch','MIS'
+	'KAK','Kakao','MIS'
+	'PIL','Pils','BIE'
+	'APF','Apfelsaft','SAE'
+	'ORA','Orangensaft','SAE'
+	'KOH','Kohlensaeurenhaltig','GET'
+}
+
+Artikel = {
+	Artikelnummer:number, Artikelname:string, Preis:number, KategorieKrz:string
+	1,'Multisaft',2.95,'SAE'
+	2,'Bonaqua',2.95,'KOH'
+	3,'Cola',2.95,'KOH'
+	4,'Bordeaux',5,'ALK'
+	5,'Pils',2.5,'ALK'
+	6,'LatteGetraenk',2.55,'MIL'
+	7,'Kirschsaft',2.55,'SAE'
+	8,'Sanguis',65.95,'ALK'
+}
+
+Warenkorb = {
+	Kundennummer:number, Artikelnummer:number, Anzahl:number
+	3,3,2
+	3,5,4
+	5,1,5
+}
+
+Lager = {
+	Lagernummer:number, Standort:string, ANummer:number, Lagerbestand:number
+	27135,'INF',1,2
+	27136,'INF',2,18
+	27432,'FAN',3,0
+	27522,'MED',4,1
+	27523,'MED',5,3
+	27525,'MED',6,5
+	27527,'INF',7,3
+	27528,'MED',8,5
+}
+
+Bestellung = {
+	Bestellnummer:number, Kundennummer:number, Bestelldatum:string, Bestellstatus:string, Wunschtermin:string
+	50,6, '21.07.2016','bestaetigt','23.07.2016 15:00:00'
+	49,14, '21.07.2016','bestaetigt','23.07.2016 14:30:00'
+	48,10, '21.07.2016','bestaetigt','23.7.2016 11:30:00'
+	47,1, '20.07.2016','bestaetigt','24.07.2016 14:00:00'
+	46,4,'20.07.2016','bestaetigt','22.07.2016 12:00:00'
+	45,3,'20.07.2016','bestaetigt','23.07.2016 15:00:00'
+	44,7,'20.07.2016','bestaetigt','21.07.2016 14:00:00'
+	43,11,'20.07.2016','bestaetigt','25.07.2016 16:00:00'
+	51,12,'22.07.2016','bestellt','26.07.2016 17:00:00'
+	52,8,'22.07.2016','bestellt','26.07.2016 07:00:00'
+	53,9,'22.07.2016','bestellt','26.07.2016 11:00:00'
+	54,11,'23.07.2016','bestellt','01.08.2016 14:00:00'
+	55,5,'23.07.2016','bestaetigt','25.07.2016 12:00:00'
+	56,2,'23.07.2016','bestaetigt','25.07.2016 14:10:00'
+	57,6,'23.07.2016','bestellt','31.07.2016 14:30:00'
+	58,13,'24.07.2016','bestellt','02.08.2016 16:00:00'
+	59,7,'24.07.2016','bestellt','01.08.2016 07:00:00'
+	60,14,'25.07.2016','bestellt','04.08.2016 16:00:00'
+	61, 9, '25.07.2016', 'bestellt', '31.07.2016 14:00:00'
+}
+
+Bestellposition = {
+	Pos:number, Bestellnummer:number, Artikelnummer:number, Anzahl:number, Preis:number, Reduktion:number
+	117,60,8,20,65.95,0
+	116,59,3,10,2.95,0
+	115,58,2,25,2.95,0
+	114,57,8,9,65.95,0
+	113,56,7,4,2.55,0
+	112,55,5,18,2.5,0
+	111,54,8,4,65.95,0
+	110,53,1,4,2.95,0
+	109,52,3,15,2.95,0
+	108,51,4,4,5,0
+	107,50,8,8,65.95,0
+	106,49,8,5,65.95,0
+	105,48,1,10,2.95,0
+	104,47,8,7,65.95,0
+	103,46,2,20,2.95,0
+	102,45,6,10,2.55,0
+	101,44,5,12,2.5,0
+	100,43,8,6,65.95,0
+	118,61,4,4,5,0
+}
+
+Lieferer = {
+	Lieferernummer:number, Anrede:string, Vorname:string, Nachname:string
+	1,'Herr','Lars','Mayer'
+	2,'Frau','Anastasia','Mueller'
+	3,'Herr','Eric','Beckers'
+	4,'Herr','Dorian','Graie'
+}
+
+Lieferer_has_Artikel = {
+	Lieferernummer:number, Artikelnummer:number
+	1,1
+	2,2
+	3,3
+	4,4
+}
+
+
+
+
+
+
+
+
+
+
 group: UIBK - R, S, T
 description: Tables from and for the lecture [Databases: Foundations, Data Models and System Concepts - University of Innsbruck](http://dbis-informatik.uibk.ac.at/249-0-VO-Datenbanksysteme.html) chapter 3 
 category@de: Universität Innsbruck
@@ -83,90 +238,91 @@ b, d
 'g', 120
 }
 
+
 group: Kemper Datenbanksysteme
 description: Source: [Alfons Kemper, André Eickler: Datenbanksysteme: Eine Einführung 8. Auflage](http://www3.in.tum.de/teaching/bookDBMSeinf/), Seite 84, Abbildung 3.8
 
 Professoren = {
-PersNr:number	Name:string	Rang:string	Raum:number
-2125	Sokrates	C4	226
-2126	Russel	C4	232
-2127	Kopernikus	C3	310
-2133	Popper	C3	52
-2134	Augustinus	C3	309
-2136	Curie	C4	36
-2137	Kant	C4	7
+	PersNr:number	Name:string	Rang:string	Raum:number
+	2125	Sokrates	C4	226
+	2126	Russel	C4	232
+	2127	Kopernikus	C3	310
+	2133	Popper	C3	52
+	2134	Augustinus	C3	309
+	2136	Curie	C4	36
+	2137	Kant	C4	7
 }
 
 Studenten = {
-MatrNr:number	Name:string	Semester:number
-24002	Xenokrates	18
-25403	Jonas	12
-26120	Fichte	10
-26830	Aristoxenos	8
-27550	Schopenhauer	6
-28106	Carnap	3
-29120	Theophrastos	2
-29555	Feuerbach	2
+	MatrNr:number	Name:string	Semester:number
+	24002	Xenokrates	18
+	25403	Jonas	12
+	26120	Fichte	10
+	26830	Aristoxenos	8
+	27550	Schopenhauer	6
+	28106	Carnap	3
+	29120	Theophrastos	2
+	29555	Feuerbach	2
 }
 
 
 Vorlesungen = {
-VorlNr:number	Titel:string	SWS:number	gelesenVon:number
-5001	Grundzuege	4	2137
-5041	Ethik	4	2125
-5043	Erkenntnistheorie	3	2126
-5049	Maeeutik	2	2125
-4052	Logik	4	2125
-5052	Wissenschaftstheorie	3	2126
-5216	Bioethik	2	2126
-5259	'Der Wiener Kreis'	2	2133
-5022	'Glaube und wissen'	2	2134
-4630	'Die 3 Kritiken'	4	2137
+	VorlNr:number	Titel:string	SWS:number	gelesenVon:number
+	5001	Grundzuege	4	2137
+	5041	Ethik	4	2125
+	5043	Erkenntnistheorie	3	2126
+	5049	Maeeutik	2	2125
+	4052	Logik	4	2125
+	5052	Wissenschaftstheorie	3	2126
+	5216	Bioethik	2	2126
+	5259	'Der Wiener Kreis'	2	2133
+	5022	'Glaube und wissen'	2	2134
+	4630	'Die 3 Kritiken'	4	2137
 }
 
 voraussetzen = {
-Vorgaenger:number	Nachfolger:number
-5001	5041
-5001	5043
-5001	5049
-5041	5216
-5043	5052
-5041	5052
-5052	5259
+	Vorgaenger:number	Nachfolger:number
+	5001	5041
+	5001	5043
+	5001	5049
+	5041	5216
+	5043	5052
+	5041	5052
+	5052	5259
 }
 
 hoeren = {
-MatrNr:number	VorlNr:number
-26120	5001
-27550	5001
-27550	4052
-28106	5041
-28106	5052
-28106	5216
-28106	5259
-29120	5001
-29120	5041
-29120	5049
-29555	5022
-25403	5022
-29555	5001
+	MatrNr:number	VorlNr:number
+	26120	5001
+	27550	5001
+	27550	4052
+	28106	5041
+	28106	5052
+	28106	5216
+	28106	5259
+	29120	5001
+	29120	5041
+	29120	5049
+	29555	5022
+	25403	5022
+	29555	5001
 }
 
 Assistenten = {
-PersNr:number	Name:string	Fachgebiet:string	Boss:number
-3002	Platon	Ideenlehre	2125
-3003	Aristoteles	Syllogistik	2125
-3004	Wittgenstein	Sprachtheorie	2126
-3005	Rhetikus	Planetenbewegung	2127
-3006	Newton	'Keplersche Gesetze'	2127
-3007	Spinoza	'Gott und Natur'	2134
+	PersNr:number	Name:string	Fachgebiet:string	Boss:number
+	3002	Platon	Ideenlehre	2125
+	3003	Aristoteles	Syllogistik	2125
+	3004	Wittgenstein	Sprachtheorie	2126
+	3005	Rhetikus	Planetenbewegung	2127
+	3006	Newton	'Keplersche Gesetze'	2127
+	3007	Spinoza	'Gott und Natur'	2134
 }
 
 pruefen = {
-MatrNr:number	VorlNr:number	PersNr:number	Note:number
-28106	5001	2126	1
-25403	5041	2125	2
-27550	4630	2137	2
+	MatrNr:number	VorlNr:number	PersNr:number	Note:number
+	28106	5001	2126	1
+	25403	5041	2125	2
+	27550	4630	2137	2
 }
 
 
